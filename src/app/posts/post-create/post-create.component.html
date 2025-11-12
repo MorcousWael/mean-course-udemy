@@ -3,8 +3,21 @@
 <hr />
 <button (click)="OnAddPost(txtarea)">Create Post</button>
 <p>{{ newPostData }}</p> -->
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Post content</mat-label>
+    <input
+      matInput
+      [(ngModel)]="enteredValue"
+      placeholder="Write your post..."
+    />
+    <mat-icon matSuffix>edit</mat-icon>
+  </mat-form-field>
+</div>
 
-<textarea rows="6" [(ngModel)]="enteredValue"></textarea>
+<button mat-raised-button color="primary" (click)="OnAddPost()">
+  Create Post
+</button>
+
 <hr />
-<button (click)="OnAddPost()">Create Post</button>
 <p>{{ newPostData }}</p>
